@@ -27,6 +27,10 @@ class TestComponent(MediaPlayerDevice):
         return self._name
 
     @property
+    def media_title(self):
+        return str(self._updatecount) + " - " + str(int(time.time()))
+
+    @property
     def media_duration(self):
         return 100
 
